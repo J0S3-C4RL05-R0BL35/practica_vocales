@@ -1,0 +1,194 @@
+/*Estilos generales del juego*/
+
+body{
+    font-family: "Antique Olive CompactPS";
+}
+
+/*rejilla del juego*/
+div.content-juego{
+    height:650px;
+    width: auto;
+    background: url('../animation/fondo.png');
+    /* background: url('../img/fondos/fondo1.jpg'); */
+    display: grid;
+    grid:1fr 4fr 1fr 1fr/1fr 1fr 1fr;
+    grid-template-areas:
+    "panel-izq titulo panel-der"
+    "panel-izq dibujo panel-der"
+    "panel-izq pregunta panel-der"
+    "panel-izq respuesta panel-der"
+    ;
+    gap:20px;
+}
+.sol{
+    display:flex;
+}
+
+.sol{
+    position: relative;
+}
+
+.sol img{
+    position:absolute;
+    top: -650px;
+    left: 60px;
+}
+
+div.panel-izq, div.titulo, div.dibujo, div.pregunta, div.respuesta, div.panel-der{
+    text-align: center;
+}
+
+div.panel-izq{
+    grid-area: panel-izq;
+    padding: 210px 50px;
+}
+li.nivel1, li.nivel2, li.nivel3{
+    display: flex;
+    height: 50px;
+    padding-top: 25px;
+    padding-left: 25%;
+    cursor: pointer;
+
+}
+li.nivel1:hover, li.nivel2:hover, li.nivel3:hover{
+    transition: .3s;
+    transform: scale(1.1);
+}
+li.nivel1 p,li.nivel2 p, li.nivel3 p{
+    font-family: fantasy;
+    font-weight: bolder;
+    background:rgb(241, 241, 142);
+    color: rgb(50, 143, 205);
+    border-radius: 2px;
+    font-size: 1.5rem;
+    margin: 0 5px;
+    width: 30px;
+    height: 30px;
+}
+li.nivel1 {
+    background: cornflowerblue;
+    color: white;
+}
+li.nivel2 {
+    background: rgb(237, 189, 100);
+    color: white;
+}
+li.nivel3 {
+    background: rgb(218, 0, 91);
+    color: white;
+}
+
+.puntuacion{
+    margin-top: 40px;
+}
+
+.puntuacion p{
+    font-size: 2rem;
+    background-color: rgba(176, 196, 222, 0.555);
+    color: rgb(32, 82, 218);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.seleccionado {
+    transform: scale(1.1);
+}
+
+div.titulo{
+    grid-area: titulo;
+    color: rgb(223, 163, 0);
+    padding-top: 20px;
+    font-size: 1.5rem;
+}
+div.dibujo{
+    grid-area: dibujo;
+    padding-top: 8%;
+    background: violet;
+    border-radius: 20px;
+}
+
+div.pregunta{
+    grid-area: pregunta;
+    display:flex;
+}
+div.pregunta p{
+    background:rgb(2, 90, 117);
+    /* color: rgb(50, 143, 205); */
+    border-radius: 10px;
+    font-size: 4.5rem;
+    margin: 0 10px;
+    width: 90px;
+    height: 90px;
+}
+div.pregunta p.transparente{
+    background: transparent;
+    color: transparent;
+}
+div.pregunta p.oculto{
+    color: transparent;
+}
+div.pregunta p.mostrar{
+    color: rgb(240, 151, 49);
+}
+
+
+div.respuesta{
+    grid-area: respuesta;
+    display: flex;
+}
+div.respuesta p.error{
+    background: chocolate;
+    color: rgb(204, 16, 126);
+}
+div.respuesta p{
+    background: rgb(50, 182, 205);
+    color: rgb(231, 179, 7);
+    font-size: 4.5rem;
+    margin: 0 10px;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+div.respuesta p:hover{
+    transition: .3s;
+    font-size: 5.5rem;
+}
+div.panel-der{
+    font-size: .75rem;
+    font-family:fantasy;
+    font-weight:lighter;
+    grid-area: panel-der;
+    text-align: left;
+    margin: 50px 10px;
+    padding: 20px;
+    color: white;
+    background:linear-gradient(to bottom, rgb(11, 38, 112), rgb(73, 100, 255));
+    border-radius: 30px;  
+}
+div.panel-der p{
+    text-align: center;
+}
+div.panel-der ol li{
+    padding: 20px 0;
+}
+
+a.link {
+  text-decoration: none;
+  color:white;  
+}
+/* div.audio{
+    text-align: center;
+}
+div.audio p, div.audio img{
+    margin: 10px 0;
+}
+div.audio img:hover{
+    transition: .3s;
+    scale: 1.2;
+}
+div.audio img{
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+} */
